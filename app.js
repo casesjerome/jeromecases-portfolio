@@ -6,7 +6,7 @@ const sendMail = require("./mail");
 
 const app = express();
 const log = console.log;
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 app.set("view engine", "ejs");
 
