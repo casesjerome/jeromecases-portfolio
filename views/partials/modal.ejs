@@ -1,0 +1,39 @@
+<div>
+    <button id="triggerModal" style="display: none" data-bs-toggle="modal" data-bs-target=<%= '#' + modal %>></button>
+</div>
+
+<div class="modal fade" id="success" tabindex="-1" aria-labelledby="successModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-success text-center" id="success">Your message has been successfuly sent.</h5>                
+            </div>
+            <div class="modal-body">     
+                <p class="text-start">Hi! Thanks for reaching out.</p>           
+                <p class="text-start">I will reply to you at the soonest. For the meantime, coffee for you ☕</p>   
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>               
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="fail" tabindex="-1" aria-labelledby="failModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-danger" id="fail">Aww something went wrong.</h5>                
+            </div>
+            <div class="modal-body">
+                <p class="text-start">Hi, sorry about that. There seems to be a problem </p>   
+                <p class="text-start">(┬┬﹏┬┬)</p>
+                <p class="text-start">Please resend your message. Alternatively, you can contact me through my contact info below.</p>     
+            </div>
+            <div class="modal-footer">                
+                <a href="#contact"><button type="button" class="btn btn-info">Contact Form</button></a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
