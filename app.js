@@ -1,7 +1,8 @@
 //jshint esversion:6
-const express = require("express");
 const bodyParser = require("body-parser");
+const express = require("express");
 const ejs = require("ejs");
+const _ = require("lodash");
 const sendMail = require("./mail");
 
 const app = express();
@@ -46,7 +47,7 @@ app.get("/portfolio", (req, res) => {
 app.post("/", (req, res) => {
   const { fullName, email, subject, message } = req.body;
   
-  sendMail(email, fullName + " || " + subject, message, (err, data) => {
+  sendMail(_.trim(email), _.trim(fullName) + " || " + _.trim(subject), _.trim(message), (err, data) => {
     if (err) {
       log("Error: " + err);
       res.redirect("/?modal=fail");

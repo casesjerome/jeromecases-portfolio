@@ -1,5 +1,4 @@
-const dotenv = require('dotenv').config();
-
+require('dotenv').config();
 const nodemailer = require("nodemailer");
 const mailGun = require("nodemailer-mailgun-transport");
 
