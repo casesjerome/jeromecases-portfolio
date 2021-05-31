@@ -1,12 +1,12 @@
-require('dotenv').config();
+const dotenv = require('dotenv').config();
 
 const nodemailer = require("nodemailer");
 const mailGun = require("nodemailer-mailgun-transport");
 
 const auth = {
   auth: {
-    api_key: process.env.API_KEY,
-    domain: process.env.DOMAIN,
+    api_key: process.env.API_KEY || '',
+    domain: process.env.DOMAIN || '',
   },
 };
 
@@ -21,11 +21,11 @@ const sendMail = (email, subject, text, callback) => {
   };
 
   transporter.sendMail(mailOptions, (err, data) => {
-    if (err) {      
+    if (err) {
       return callback(err, null);
     }
     return callback(null, data);
-  });  
+  });
 };
 
 module.exports = sendMail;

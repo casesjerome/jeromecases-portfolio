@@ -2,7 +2,7 @@
   "name": "jerome-portfolio",
   "version": "1.0.0",
   "description": "Portfolio Website",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
