@@ -283,7 +283,7 @@ footer {
 }
 
 #about .header-background {
-  background-image: url("../assets/images/about-header-img.jpg");
+  background-image: image-url ("../assets/images/about-header-img.jpg");
 }
 
 #resume .header-background {
