@@ -341,7 +341,7 @@ a span::after {
 
 .sub-heading-text {}
 
-/* Technologies Section*/
+/* Technologies Section (Resume Page)*/
 #technologies .container-fluid {
   position: relative;
   z-index: 3
@@ -360,7 +360,7 @@ a span::after {
   display: inline-block;
 }
 
-/*Personal Project Section*/
+/*Personal Project Section (Portfolio Page)*/
 #projects .container-fluid {
   position: relative;
   z-index: 3
@@ -382,7 +382,13 @@ a span::after {
   transform: scale(1.1);
 }
 
-/* Education Section */
+/*Others Section (Portfolio Page)*/
+#projects .container-fluid {
+  position: relative;
+  z-index: 3
+}
+
+/* Education Section (About Page)*/
 #education {
   position: relative;
   z-index: 3
