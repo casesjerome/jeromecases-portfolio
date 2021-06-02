@@ -1,3 +1,3 @@
-# my-portfolio
+# My Portfolio
 
 https://jeromecases.herokuapp.com
