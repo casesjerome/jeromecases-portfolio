@@ -3,7 +3,8 @@
   --sky: #c6e2ff;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -162,7 +163,8 @@ footer {
   --line-arrow-transition-delay: 240ms;
 }
 
-.a span::before, a span::after {
+.a span::before,
+a span::after {
   content: "";
   position: absolute;
   right: -18%;
@@ -393,13 +395,15 @@ footer {
 }
 
 /* Footer */
-@media (min-width: 992px) {
+@media (min-width: 1401px),
+(min-height: 601px) {
   #github-hero {
     display: none;
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1400px),
+(max-height: 600px) {
   .img-profile {
     visibility: hidden;
   }
@@ -413,7 +417,8 @@ footer {
   }
 }
 
-@media (max-width: 1028px) or ((max-width: 1028px) and (max-height: 800px)) {
+@media (max-width: 1028px),
+(max-width: 1028px) and (max-height: 800px) {
   .header-text {
     font-size: 3rem;
   }
