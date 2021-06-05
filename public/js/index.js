@@ -1,7 +1,7 @@
 "use strict";
 // Navigation Scroll
 $(window).scroll(function () {
-  let navBar = $(".navbar");
+  const navBar = $(".navbar");
   navBar.toggleClass("scrolled", $(this).scrollTop() >= navBar.height());
 });
 
@@ -21,9 +21,7 @@ $(document).ready(function () {
   if ($(document).attr("URL").indexOf("about") > 0) {
     //checks if page is "About"
     about.addClass("active");
-  } else if ($(document).attr("URL").indexOf("portfolio") > 0) {
-    portfolio.addClass("active");
-  } else {
+  } else if ($(document).attr("URL").indexOf("resume") > 0) {
     //checks if page is "index"
     resume.addClass("active"); //adds active class at load
     const pos = $("#contact .container").offset().top; //absolute top position of contact section
@@ -41,13 +39,15 @@ $(document).ready(function () {
         contact.removeClass("active");
       }
     });
+  } else {
+    portfolio.addClass("active");
   }
 });
 
 //Modal trigger for Contact
-$(document).ready(function () {
-  $("#triggerModal").click();
-});
+  $(document).ready(function () {  
+    $("#triggerModal").click();   
+ });
 
 //Enable Bootstrap Popover
 if ($("section").is(".wPopover")) {

@@ -21,12 +21,9 @@ app.use(express.static(__dirname + "/public"));
 
 //Routes
 app.get("/", (req, res) => {
-  let {modal} = req.query;
-
-  res.render("resume", {
-    title: "Resume",
-    pageId: "resume",
-    modal: modal
+  res.render("portfolio", {
+    title: "Portfolio",
+    pageId: "portfolio",
   });
 });
 
@@ -37,24 +34,31 @@ app.get("/about", (req, res) => {
   });
 });
 
-app.get("/portfolio", (req, res) => {
-  res.render("portfolio", {
-    title: "Portfolio",
-    pageId: "portfolio",
+app.get("/resume", (req, res) => {
+  let { modal } = req.query;
+
+  res.render("resume", {
+    title: "Resume",
+    pageId: "resume",
+    modal: modal,
   });
 });
 
 app.post("/", (req, res) => {
   const { fullName, email, subject, message } = req.body;
-  
-  sendMail(_.trim(email), _.trim(fullName) + " || " + _.trim(subject), _.trim(message), (err, data) => {
-    if (err) {
-      log("Error: " + err);
-      res.redirect("/?modal=fail");
+
+  sendMail(
+    _.trim(email),
+    _.trim(fullName) + " || " + _.trim(subject),
+    _.trim(message),
+    (err, data) => {
+      if (err) {
+        log("Error: " + err);
+        res.redirect("resume?modal=fail");
+      }
+      res.redirect("resume?modal=success");
     }
-    res.redirect("/?modal=success");
-  });
-  
+  );   
 });
 
 //404 Page not found

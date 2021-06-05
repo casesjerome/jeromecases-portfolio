@@ -1,5 +1,7 @@
 <div>
-    <button id="triggerModal" style="display: none" data-bs-toggle="modal" data-bs-target=<%= '#' + modal %>></button>
+    <button id="triggerModal" style="display: none" <% if (modal) {%> data-bs-toggle="modal"
+        data-bs-target=<%= '#' + modal %> <%}%>></button>
+    <span id=""></span>
 </div>
 
 <div class="modal fade" id="success" tabindex="-1" aria-labelledby="successModal" aria-hidden="true">
@@ -13,7 +15,7 @@
                 <p class="text-start">I will reply to you at the soonest. For the meantime, coffee for you ☕</p>   
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>               
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal" onclick="javascript:window.location='/resume'">Close</button>               
             </div>
         </div>
     </div>
@@ -30,9 +32,8 @@
                 <p class="text-start">(┬┬﹏┬┬)</p>
                 <p class="text-start">Please resend your message. Alternatively, you can contact me through my contact info below.</p>     
             </div>
-            <div class="modal-footer">                
-                <a href="#contact"><button type="button" class="btn btn-info">Contact Form</button></a>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="javascript:window.location='/resume#contact'">Close</button>
             </div>
         </div>
     </div>
